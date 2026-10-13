@@ -382,11 +382,53 @@ order = {
 }
 
 
-for keys in order.keys():
-    print(order(keys))
+for key in order.keys():
+    print(order[key])
 
 for value in order.values():
-    print(order(value))
+    print(value)
 
 for key, value in order.items():
     print(f"{key}, {value}")
+
+
+print("@@@@@@@@@@ Dictionaries — Challenge 6: Check keys and count entries @@@@@@@")
+
+order = {
+    "order_id": "Order105",
+    "plant": "Vacaville",
+    "amount": 15000,
+    "status": "Pending"
+}
+
+print("order_id" in order)
+print("customer" not in order)
+print(len(order))
+
+if "customer" not in order:
+    print("Customer field is missing")
+
+print("##############################################")
+print("Dictionaries — Final Challenge: ERP Order Data")    
+
+order = {
+    "order_id": "Order201",
+    "plant": "PTC",
+    "amount": 8500,
+    "status": "Pending"
+}
+
+order["status"] = "Completed"   
+order["Customer"] = "ABC Ltd"
+print(order["order_id"])
+print(order.get("Customer"))
+if "invoice_number" in order:
+    print("Invoice field is available")
+else:
+    print("Invoice is not available")
+
+print("Number of items in order is  :",len(order))   
+
+for key, values in order.items():
+    print(f"{key} : {values}")
+
