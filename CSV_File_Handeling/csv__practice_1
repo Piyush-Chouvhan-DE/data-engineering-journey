@@ -1,0 +1,33 @@
+import csv
+from pathlib import Path
+
+file_path = Path(__file__).parent/"employees.csv"
+
+with open(file_path,"r",newline="",encoding="utf-8")  as file:
+    reader = csv.DictReader(file)
+
+    count = 0
+    total_salary = 0
+    for row in reader:
+        salary = int(row["salary"])
+
+        if salary > 50000:
+            print(row["name"])
+            count+=1
+            total_salary += salary
+
+
+print("total employee with high salary :",count)
+print(f"Total salary of employees: ₹{total_salary:,}")
+#print("Total salary of employees: " f"₹ {total_salary:,}")
+#print("total salary of employees :" f"{total_salary:,}")
+#print(f"{Total salary of employess:, total_salary}")
+
+            
+             
+
+
+       
+    
+
+
