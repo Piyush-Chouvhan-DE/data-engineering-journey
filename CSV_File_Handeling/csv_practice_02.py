@@ -7,6 +7,7 @@ rejected_path = Path(__file__).parent/"rejected_employees.csv"
 filtered_path = Path(__file__).parent/"filtered_employee.csv"
 
 # Calculate annual salary from monthly salary
+# Convert monthly salary into annual salary
 def calculate_annual_salary(monthly_salary):
     return monthly_salary * 12
 
