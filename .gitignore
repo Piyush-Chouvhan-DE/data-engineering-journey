@@ -1,0 +1,10 @@
+# Python cache files
+__pycache__/
+
+# Sensitive session data
+timesheet_session.json
+
+# Generated ETL output files
+CSV_File_Handeling/data_engieering_employees.csv
+CSV_File_Handeling/filtered_employee.csv
+CSV_File_Handeling/rejected_employees.csv
